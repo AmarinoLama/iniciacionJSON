@@ -1,0 +1,35 @@
+{"listas": [
+  {
+    "nombre": "gym",
+    "fechaCreacoin":"16/12/2005",
+    "canciones": [
+      {
+        "titulo": "pedro marinero",
+        "autor": "pepe",
+        "duracion": "87:00"
+      },
+      {
+        "titulo": "aa",
+        "autor": "eee",
+        "duracion": "870"
+      }
+    ]
+  },
+  {
+    "nombre": "ducha",
+    "fechaCreacoin":"16/12/1111",
+    "canciones": [
+      {
+        "titulo": "adasda",
+        "autor": "adasda",
+        "duracion": "87:00"
+      },
+      {
+        "titulo": "aadadadaeeeeea",
+        "autor": "iii",
+        "duracion": "99"
+      }
+      ]
+    }
+  ]
+}

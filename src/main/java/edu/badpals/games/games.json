@@ -1,0 +1,74 @@
+{
+  "juegos": [
+    {
+      "nombre": "pacman",
+      "version": "22.04",
+      "descripcion": "retro",
+      "idiomas": "castellano","ingles","catalan"],
+      "imagenes": ["https://example.com/imagen1.jpg",
+        "https://example.com/imagen2.jpg",
+        "https://example.com/imagen3.jpg"],
+      "opiniones": [
+        {
+          "comentario": "buen juego",
+          "usuario": {
+            "id": "guillemer",
+            "avatar": "guerrero",
+            "nombre": "Guillermo"
+          }
+        },
+        {
+          "comentario": "buen juego",
+          "usuario": {
+            "id": "guillemer",
+            "avatar": "guerrero",
+            "nombre": "Guillermo"
+          }
+        },
+        {
+          "comentario": "buen juego",
+          "usuario": {
+            "id": "guillemer",
+            "avatar": "guerrero",
+            "nombre": "Guillermo"
+          }
+        }
+      ]
+    },
+    {
+      "nombre": "minecraft",
+      "version": "22.04",
+      "descripcion": "retro",
+      "idiomas": "castellano","ingles","catalan"],
+      "imagenes": ["https://example.com/imagen1.jpg",
+        "https://example.com/imagen2.jpg",
+        "https://example.com/imagen3.jpg"],
+      "opiniones": [
+        {
+          "comentario": "buen juego",
+          "usuario": {
+            "id": "guillemer",
+            "avatar": "guerrero",
+            "nombre": "Guillermo"
+          }
+        },
+        {
+          "comentario": "buen juego",
+          "usuario": {
+            "id": "guillemer",
+            "avatar": "guerrero",
+            "nombre": "Guillermo"
+          }
+        },
+        {
+          "comentario": "buen juego",
+          "usuario": {
+            "id": "guillemer",
+            "avatar": "guerrero",
+            "nombre": "Guillermo"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,17 +1,17 @@
 package edu.badpals.listaCanciones;
 
 import java.util.List;
-import com.fasterxml.jackson.annotation.JsonProperty;
+//import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ListasItem{
 
-	@JsonProperty("canciones")
+	//@JsonProperty("canciones")
 	private List<CancionesItem> canciones;
 
-	@JsonProperty("nombre")
+	//@JsonProperty("nombre")
 	private String nombre;
 
-	@JsonProperty("fechaCreacoin")
+	//@JsonProperty("fechaCreacoin")
 	private String fechaCreacoin;
 
 	public List<CancionesItem> getCanciones(){

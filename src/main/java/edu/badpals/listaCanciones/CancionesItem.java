@@ -1,18 +1,18 @@
 package edu.badpals.listaCanciones;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
+//import com.fasterxml.jackson.annotation.JsonProperty;
 
 // Archivo generado automáticamente
 
 public class CancionesItem{
 
-	@JsonProperty("titulo")
+	//@JsonProperty("titulo")
 	private String titulo;
 
-	@JsonProperty("duracion")
+	//@JsonProperty("duracion")
 	private String duracion;
 
-	@JsonProperty("autor")
+	//@JsonProperty("autor")
 	private String autor;
 
 	public String getTitulo(){

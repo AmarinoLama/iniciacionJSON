@@ -1,6 +1,5 @@
 package edu.badpals.pokemon;
 
-
 import org.json.JSONObject;
 import org.json.XML;
 
@@ -9,19 +8,18 @@ import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-
-// Escribir el fichero xml en un string y convertirlo a JSON
-
 public class XMLtoJSON {
 
     public void main(String[] args) {
-        System.out.println("Dime la ruta del archivo:"); // "C:\Users\a23amanlv\IdeaProjects\iniciacionJSON\src\main\java\edu\badpals\pokemon\pokemon-reducido.xml
+        System.out.println("Dime la ruta del archivo:"); // "C:\Users\a23amanlv\IdeaProjects\iniciacionJSON\src\main\java\edu\badpals\pokemon\pokemon-reducido.xml"
         Scanner sc = new Scanner(System.in);
         Path path = Path.of(sc.nextLine());
 
         String xmlString = readFile(path);
         JSONObject json = XML.toJSONObject(xmlString);
-        System.out.println(json.toString(4)); // Deja tabulaciones para darle mejor formato
+
+        System.out.println("Dime donde quieres guardar el json:");
+        writeJSON(json.toString(4), Path.of(sc.nextLine() + "/pokemon.json")); // Deja tabulaciones para darle mejor formato
     }
 
     public String readFile(Path path) {
@@ -39,16 +37,13 @@ public class XMLtoJSON {
 
     public void writeJSON(String json, Path path) {
 
-        /*try (BufferedWriter writer = new BufferedWriter(new FileWriter(ruta.toString()))) {
-            for (String line : palabras) {
-                writer.write(line);
-                writer.newLine();
-            }
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(path.toString()))) {
+            writer.write(json);
         } catch (IOException e) {
             System.err.println(e.getMessage());
         }
 
-        System.out.println("Archivo ordenado generado: " + ruta);*/
+        System.out.println("Archivo ordenado generado: " + path);
     }
 
 }

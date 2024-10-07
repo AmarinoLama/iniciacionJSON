@@ -1,11 +1,11 @@
 package edu.badpals.pokemon;
 
-import org.json.JSONObject;
-import org.json.XML;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 
 import java.io.*;
 import java.nio.file.Path;
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class XMLtoJSON {
@@ -15,35 +15,22 @@ public class XMLtoJSON {
         Scanner sc = new Scanner(System.in);
         Path path = Path.of(sc.nextLine());
 
-        String xmlString = readFile(path);
-        JSONObject json = XML.toJSONObject(xmlString);
+        ObjectMapper mapper = new ObjectMapper();
+        try {
+            String xmlString = new String(java.nio.file.Files.readAllBytes(path));
 
-        System.out.println("Dime donde quieres guardar el json:");
-        writeJSON(json.toString(4), Path.of(sc.nextLine() + "/pokemon.json")); // Deja tabulaciones para darle mejor formato
-    }
+            XmlMapper xmlMapper = new XmlMapper();
+            JsonNode node = xmlMapper.readTree(xmlString.getBytes());
+            ObjectMapper jsonMapper = new ObjectMapper();
+            String jsonString = jsonMapper.writerWithDefaultPrettyPrinter().writeValueAsString(node);
 
-    public String readFile(Path path) {
-        StringBuilder xmlString = new StringBuilder();
-        try (BufferedReader lector = new BufferedReader(new
-                FileReader(path.toFile()));) {
-            String linea;
-            while ((linea = lector.readLine()) != null)
-                xmlString.append(linea);
+            System.out.println("Dime donde quieres guardar el json:");
+            BufferedWriter writer = new BufferedWriter(new FileWriter(Path.of(sc.nextLine()).resolve("pokemon.json").toString()));
+            writer.write(jsonString);
+
         } catch (IOException e) {
-            System.err.println(e.getMessage());
+            e.printStackTrace();
         }
-        return xmlString.toString();
-    }
-
-    public void writeJSON(String json, Path path) {
-
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(path.toString()))) {
-            writer.write(json);
-        } catch (IOException e) {
-            System.err.println(e.getMessage());
-        }
-
-        System.out.println("Archivo ordenado generado: " + path);
     }
 
 }

@@ -12,11 +12,9 @@ public class XMLtoJSON {
 
     public static void main(String[] args) {
 
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(Path.of("src\\main\\java\\edu\\badpals\\pokemon\\pokemon.json").toFile()))) {
-
-            JsonNode node = new XmlMapper().readTree(Path.of("src\\main\\java\\edu\\badpals\\pokemon\\pokemon-reducido.xml").toFile());
-            String jsonString = new ObjectMapper().writerWithDefaultPrettyPrinter().writeValueAsString(node);
-            writer.write(jsonString);
+        try {
+            JsonNode node = new XmlMapper().readTree(new File("src/main/java/edu/badpals/pokemon/pokemon-reducido.xml"));
+            new ObjectMapper().writerWithDefaultPrettyPrinter().writeValue(new File("src/main/java/edu/badpals/pokemon/pokemon.json"), node);
 
         } catch (IOException e) {
             e.printStackTrace();

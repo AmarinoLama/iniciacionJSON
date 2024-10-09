@@ -1,15 +1,31 @@
 package edu.badpals.gamesBin;
 
-public class Game {
+import java.io.Serializable;
+import java.util.HashMap;
+import java.util.Map;
+
+public class Game implements Serializable {
+
+    private static final long serialVersionUID = 1L;
 
     private String name;
     private String description;
     private String languages;
+    private Map<String, String> comentaries = new HashMap<>();
 
-    public Game(String name, String description, String languages) {
+    public Map<String, String> getComentaries() {
+        return comentaries;
+    }
+
+    public void setComentaries(Map<String, String> comentaries) {
+        this.comentaries = comentaries;
+    }
+
+    public Game(String name, String description, String languages, Map<String, String> comentaries) {
         this.name = name;
         this.description = description;
         this.languages = languages;
+        this.comentaries = comentaries;
     }
 
     public String getName() {
@@ -34,5 +50,10 @@ public class Game {
 
     public void setLanguages(String languages) {
         this.languages = languages;
+    }
+
+    @Override
+    public String toString() {
+        return "Game{name='" + name + "', description='" + description + "', languages='" + languages + "'}";
     }
 }

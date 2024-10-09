@@ -10,11 +10,7 @@
   "name": "Molecule Man",
   "age": "29",
   "secretIdentity": "Dan Jukes",
-  "powers": {
-    "power1": "Radiation resistance",
-    "power2": "Turning tiny",
-    "power3": "Radiation blast"
-  }
+  "powers": ["Radiation resistance", "Turning tiny", "Radiation blast"]
 },
 {
 "name": "Madame Uppercut",

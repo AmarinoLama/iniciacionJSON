@@ -1,0 +1,25 @@
+[ {
+  "name" : "Mario",
+  "description" : "plataformer",
+  "languages" : "es",
+  "comentaries" : {
+    "Miguel" : "muy bueno",
+    "Javi" : "muy malo"
+  }
+}, {
+  "name" : "Zelda",
+  "description" : "adventure",
+  "languages" : "es, en",
+  "comentaries" : {
+    "Pablo" : "espectaculas",
+    "Alfonso" : "decepcionante"
+  }
+}, {
+  "name" : "TWD",
+  "description" : "zombie",
+  "languages" : "es, en, fr",
+  "comentaries" : {
+    "Andres" : "me encanto",
+    "Mateo" : "lo odio"
+  }
+} ]

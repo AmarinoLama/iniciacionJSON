@@ -41,9 +41,6 @@ public class LeerGames {
             String json = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(games);
             writer.write(json);
 
-            /*JsonNode node = new XmlMapper().readTree(new File("src/main/java/edu/badpals/gamesBin/pruebaGames.bin"));
-            new ObjectMapper().writerWithDefaultPrettyPrinter().writeValue(new File("src/main/java/edu/badpals/gamesBin/pruebaGames.json"), node);*/
-
         } catch (IOException e) {
             e.printStackTrace();
         }

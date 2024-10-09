@@ -13,13 +13,7 @@ public class Game implements Serializable {
     private String languages;
     private Map<String, String> comentaries = new HashMap<>();
 
-    public Map<String, String> getComentaries() {
-        return comentaries;
-    }
 
-    public void setComentaries(Map<String, String> comentaries) {
-        this.comentaries = comentaries;
-    }
 
     public Game(String name, String description, String languages, Map<String, String> comentaries) {
         this.name = name;
@@ -50,6 +44,14 @@ public class Game implements Serializable {
 
     public void setLanguages(String languages) {
         this.languages = languages;
+    }
+
+    public Map<String, String> getComentaries() {
+        return comentaries;
+    }
+
+    public void setComentaries(Map<String, String> comentaries) {
+        this.comentaries = comentaries;
     }
 
     @Override
